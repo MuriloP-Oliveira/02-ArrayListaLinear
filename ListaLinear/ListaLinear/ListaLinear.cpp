@@ -1,4 +1,4 @@
-// Claudio Souza Nunes
+// Murilo Pereira e Oliveira
 
 #include <iostream>
 using namespace std;
@@ -97,13 +97,32 @@ void inserirElemento()
 		nElementos++;
 	}
 	else {
-		cout << "Lista cheia";
+		cout << "Lista cheia" << endl;
 	}
 
 }
 
 // deve ser implementada como resposta ao exercicio
-void buscarElemento()
-{
+void buscarElemento() {
+	int pesquisaElemento;
+	int t = 1;
+	if (nElementos == 0)
+	{
+		cout << " A lista esta vazia \n";
+	}
+	else {
+		cout << "Digite um elemento para realizar a busca. ";
+		cin >> pesquisaElemento;
+		for (int i = 0; i <= 4; i++) {
+			if (pesquisaElemento == lista[i]) {
+				cout << "Esse elemento existe na posicao " << i << endl;
+				t = 0;
+			}
 
+		}
+		if (t == 1) {
+			cout << "Esse elemento nao esta na lista" << endl;
+
+		}
+	}
 }
